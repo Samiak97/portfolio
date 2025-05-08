@@ -1,0 +1,132 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Colors - Darker Modern Theme */
+:root {
+  --primary: #5b8def;    /* Muted Blue */
+  --accent: #e17cb6;     /* Muted Pink */
+  --text-dark: #222;
+  --text-light: #444;
+  --bg-light: #f1f3f5;
+  --white: #ffffff;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Card Layout for Sections */
+header, section, footer {
+  background-color: var(--white);
+  border-left: 5px solid var(--primary);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+header p {
+  color: var(--text-light);
+  margin-top: 10px;
+}
+
+/* Section Titles */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+/* Experience Items */
+.experience-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.experience-item img {
+  width: 100%;
+  border-radius: 8px;
+  border: 3px solid var(--primary);
+}
+
+.experience-details h3 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.experience-details p {
+  color: var(--text-light);
+}
+
+/* Interests */
+#interests ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: var(--text-dark);
+}
+
+/* Game Section */
+#game a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#game a:hover {
+  border-color: var(--accent);
+}
+
+#game img {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 8px;
+  border: 3px solid var(--accent);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .experience-item {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  body {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
